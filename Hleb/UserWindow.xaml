@@ -1,0 +1,49 @@
+﻿<Window x:Class="Hleb.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hleb"
+        mc:Ignorable="d"
+         Title="UserWindow" Height="450" Width="350">
+    <Window.Background>
+        <ImageBrush ImageSource="Images\dd.jpg" />
+    </Window.Background>
+
+    <Grid>
+
+
+
+        <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,30">
+                <TextBlock Name="TextboxTeam" Text="ХЛЕБ" FontFamily="Rockwell Nova" FontSize="50" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Black"></TextBlock>
+                <Image Source="Images\Человек.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Width="170" Height="170" Opacity="0.985"/>
+                <TextBlock Name="TextboxName" Text="Имя" Grid.ColumnSpan="2" FontFamily="Rockwell Nova" TextAlignment="Center" FontSize="30" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" Foreground="Black"></TextBlock>
+                <TextBlock Name="TextboxSurname" Text="Фамилия" Grid.ColumnSpan="2" FontFamily="Rockwell Nova" TextAlignment="Center" FontSize="30" VerticalAlignment="Bottom"  Grid.Column="1" Grid.Row="2" Foreground="Black"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="4" Grid.RowSpan="4">
+                <Button Name="ButtonCatalog" BorderThickness="0" Height="60" Width="60" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ButtonCatalog_Click" Margin="9" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\list.png" />
+                    </Button.Background>
+                </Button>
+                <Button BorderThickness="0"  Height="60" Grid.Column="2" Grid.Row="3" Width="60" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="9" Click="ButtonExit_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/sign-out.png" />
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Favourite" BorderThickness="0"  Height="60" Grid.Column="3" Grid.Row="3" Width="60" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="9" Click="Favourite_Click"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\lace.png" />
+                    </Button.Background>
+                </Button>
+                <Button Name="ButtonInfo" BorderThickness="0"  Height="60" Grid.Column="1" Grid.Row="3" Width="60"  HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="9" Click="ButtonInfo_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\information.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

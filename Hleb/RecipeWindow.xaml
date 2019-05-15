@@ -1,0 +1,48 @@
+﻿<Window x:Class="Hleb.RecipeWindow " Height="700" Width="1200"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hleb"
+        mc:Ignorable="d"
+        Title="RecipeWindow">
+    <Window.Background>
+        <ImageBrush ImageSource="Images\ll.jpg" />
+    </Window.Background>
+    <Grid Name="MainGrid" >
+       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="1.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="1.6*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1.7*"/>
+        </Grid.RowDefinitions>
+        <Image Name="Img" Margin="10" Grid.Row="1" Grid.RowSpan="2"/>
+        <StackPanel Margin="5" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock FontFamily="Rockwell Nova" Margin="5" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White">
+            
+            <Hyperlink Name="Hyper"  RequestNavigate="Hyperlink_RequestNavigate" FontSize="40" >Click Hear</Hyperlink>
+            </TextBlock>
+            <TextBlock Name="rate" FontFamily="Rockwell Nova" Text="Rating - " FontSize="18" TextAlignment="Center" Foreground="Black"/>
+        </StackPanel>
+
+        <TextBlock Margin="10" Grid.Column="1" Text="Ingredients" FontFamily="Rockwell Nova" FontSize="36" TextAlignment="Center" FontWeight="Bold" TextDecorations="Underline" Foreground="Black" />
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Margin="20"> 
+            <StackPanel Name="Stack" >
+                <TextBlock />
+                <TextBlock Height="25"/>
+            </StackPanel>
+        </ScrollViewer>
+        
+        <TextBlock Name="nametxt" Margin="5" FontFamily="Rockwell Nova" Text="Name" FontSize="38" FontWeight="Bold" TextAlignment="Center" Foreground="Black" TextWrapping="Wrap"/>
+        <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1">
+            <TextBlock Margin="5" Text="Description:"/>
+            <TextBox x:Name="Description" Margin="5"/>
+            <Button Name="FavButton"  Content=" Add to Recipe Book "  FontSize="30" FontWeight="Bold" Click="Clic_fav"/>
+        </StackPanel>
+    </Grid>
+</Window>
